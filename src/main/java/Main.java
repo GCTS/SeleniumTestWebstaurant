@@ -80,7 +80,7 @@ public static void main(String[] args) {
 			JavascriptExecutor clickButtonScript = (JavascriptExecutor)driver;
 			clickButtonScript.executeScript("arguments[0].click();", lastButton);
 
-			wait.until(ExpectedConditions.elementToBeClickable(By.name("addToCartButton")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("addToCartButton")));
 			List<WebElement> cartButtons = driver.findElements(By.name("addToCartButton"));
 			cartButtons.get(cartButtons.size() - 1).click();
 
