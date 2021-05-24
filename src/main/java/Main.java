@@ -72,7 +72,8 @@ public static void main(String[] args) {
 
 	private static boolean testLastAddToCartButton(){
 		//Verify that we can click the last item found in our search
-		try{			wait.until(ExpectedConditions.elementToBeClickable(By.className("rc-pagination-item")));
+		try{
+			wait.until(ExpectedConditions.elementToBeClickable(By.className("rc-pagination-item")));
 			List<WebElement> pageButtons = driver.findElements(By.className("rc-pagination-item"));
 			WebElement lastButton = pageButtons.get(pageButtons.size() - 1);
 
