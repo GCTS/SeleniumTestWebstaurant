@@ -17,7 +17,10 @@ public class Main {
 	public static WebDriverWait wait = new WebDriverWait(driver, 30); //We're going to use 30 seconds max as a default timeout value
 
 public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Odidn\\Desktop\\chromedriver.exe");
+        String path = System.getProperty("user.dir") + "\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\Odidn\\Desktop\\chromedriver.exe");
 		//WebDriverWait wait = new WebDriverWait(driver, 30); //We're going to use 30 seconds max as a default timeout value
 
 		String homeUrl = "https://www.webstaurantstore.com"; //Base URL
